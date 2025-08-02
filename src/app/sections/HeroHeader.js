@@ -4,8 +4,8 @@ import NavMenu from './NavMenu';
 
 export default function HeroHeader() {
     return (
-        <header style={{ borderBottom: '1px solid #eee', background: '#fff', position: 'relative', zIndex: 10 }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '2rem 5vw', maxWidth: 1400, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+        <header style={{ borderBottom: '1px solid #eee', background: '#fff', position: 'relative', zIndex: 5 }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '2rem 5vw', maxWidth: 1400, margin: '0 auto', position: 'relative', zIndex: 6 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                     <img src="./4118.jpg" alt="Krishnawanshi Overseas Logo" width={60} height={60} />
                     <div style={{ fontWeight: 'bold', fontSize: 24, lineHeight: 1.1, color: '#111' }}>
@@ -14,7 +14,7 @@ export default function HeroHeader() {
                 </div>
                 <NavMenu />
             </div>
-            <section id="home" style={{ position: 'relative', width: '100%', minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#fff' }}>
+            <section id="home" style={{ position: 'relative', width: '100%', minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#fff', zIndex: 5 }}>
                 {/* Background image */}
                 <img
                     src="/h.jpg"
@@ -31,7 +31,7 @@ export default function HeroHeader() {
                     }}
                 />
                 {/* Remove overlay for clarity */}
-                <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', width: '100%' }}>
+                <div style={{ position: 'relative', zIndex: 6, textAlign: 'center', width: '100%' }}>
                     <h1
                         style={{
                             fontSize: '3.5rem',
@@ -59,4 +59,4 @@ export default function HeroHeader() {
             </section>
         </header>
     );
-} 
+}

@@ -6,108 +6,108 @@ const products = [
     {
         name: 'BEAKER',
         desc: '100ml, 250ml, 500ml, 1000ml',
-        img: 'https://images.pexels.com/photos/4021087/pexels-photo-4021087.jpeg?auto=compress&cs=tinysrgb&w=400&h=180',
-        link: '/products/beaker'
+        img: '/lab-glassware-with-colored-substance-assortment.jpg',
+        link: '/sample-local-pdf.pdf'
     },
     {
         name: 'FLASK',
         desc: '250ml, 500ml, 1000ml',
-        img: 'https://images.pexels.com/photos/4021088/pexels-photo-4021088.jpeg?auto=compress&cs=tinysrgb&w=400&h=180',
-        link: '/products/flask'
+        img: '/laboratory-glassware-with-blue-liquid-assortment.jpg',
+        link: '/sample-local-pdf.pdf'
     },
     {
         name: 'TEST TUBE',
         desc: '5ml, 10ml, 20ml, 50ml',
-        img: 'https://images.pexels.com/photos/4021089/pexels-photo-4021089.jpeg?auto=compress&cs=tinysrgb&w=400&h=180',
-        link: '/products/test-tube'
+        img: '/world-science-day-arrangement-with-microscope-copy-space.jpg',
+        link: '/sample-local-pdf.pdf'
     },
     {
         name: 'DOUBLE SURFACE CONDENSER',
         desc: '100mm, 150mm, 200mm, 300mm, 400mm, 500mm',
-        img: 'https://images.pexels.com/photos/4021090/pexels-photo-4021090.jpeg?auto=compress&cs=tinysrgb&w=400&h=180',
-        link: '/products/condenser'
+        img: '/front-view-chemicals-composition-lab-with-copy-space.jpg',
+        link: '/sample-local-pdf.pdf'
     },
     {
         name: 'BURETTES (GLASS STOPCOCK/ROTAFLOW)',
         desc: '5ml, 10ml, 25ml, 50ml, 100ml',
-        img: 'https://images.pexels.com/photos/4021091/pexels-photo-4021091.jpeg?auto=compress&cs=tinysrgb&w=400&h=180',
-        link: '/products/burettes'
+        img: '/laboratory-glassware-with-colored-liquid.jpg',
+        link: '/sample-local-pdf.pdf'
     },
     {
         name: 'PIPETTES (GRADUATED/VOLUMETRIC)',
         desc: '1.0ml, 2.0ml, 5.0ml, 10.0ml, 25.0ml, 50.0ml',
-        img: 'https://images.pexels.com/photos/4021092/pexels-photo-4021092.jpeg?auto=compress&cs=tinysrgb&w=400&h=180',
-        link: '/products/pipettes'
+        img: '/laboratory-glassware-with-blue-liquid-assortment.jpg',
+        link: '/sample-local-pdf.pdf'
     },
     {
         name: 'CULTURE TUBES (CLEAR GLASS/AMBER(RB))',
         desc: '5ml, 10ml, 30ml, 60ml, 150ml',
-        img: 'https://images.pexels.com/photos/4021093/pexels-photo-4021093.jpeg?auto=compress&cs=tinysrgb&w=400&h=180',
-        link: '/products/culture-tubes-rb'
+        img: '/laboratory-glassware-with-colored-liquid.jpg',
+        link: '/sample-local-pdf.pdf'
     },
     {
         name: 'CULTURE TUBES (CLEAR GLASS/AMBER(FB))',
         desc: '5ml, 10ml, 30ml, 60ml, 150ml',
-        img: 'https://images.pexels.com/photos/4021094/pexels-photo-4021094.jpeg?auto=compress&cs=tinysrgb&w=400&h=180',
-        link: '/products/culture-tubes-fb'
+        img: '/laboratory-glassware-with-colored-liquid-fb.jpg', // Placeholder; please confirm the actual file name
+        link: '/sample-local-pdf.pdf'
     }
 ];
 
 export default function Products() {
     return (
-        <section id="products" style={{ background: '#111', color: '#fff', padding: '5vw 0' }}>
-            <Link href="/" className="nav-back-desktop" style={{ background: 'transparent', color: '#fff', padding: '0.5rem 2rem', borderRadius: 24, fontWeight: 'bold', textDecoration: 'none', fontSize: 18, marginLeft: 16 }}>Back</Link>
+        <section id="products" className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+                <Link 
+                    href="/" 
+                    className="inline-block mb-8 px-6 py-2 text-lg font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors duration-300"
+                >
+                    Back
+                </Link>
 
-            <h2 style={{
-                textAlign: 'center',
-                fontSize: '3.2rem',
-                marginBottom: 8,
-                fontWeight: 700,
-                fontFamily: 'serif',
-                letterSpacing: 1,
-            }}>Our Products</h2>
-            <p style={{ textAlign: 'center', marginBottom: 32, fontSize: 22 }}>Product Offerings by Krishnawanshi Overseas</p>
-            <div className="products-original-grid" style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                gap: 48,
-                justifyContent: 'center',
-                alignItems: 'end',
-                maxWidth: 1200,
-                margin: '0 auto',
-            }}>
-                {products.map((p, i) => (
-                    <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'none', boxShadow: 'none', padding: 0 }}>
-                        <img
-                            src={p.img}
-                            alt={p.name}
-                            width={180}
-                            height={180}
-                            style={{ objectFit: 'contain', borderRadius: 0, marginBottom: 18, background: '#fff', maxHeight: 180, maxWidth: '100%' }}
-                            loading="lazy"
-                        />
-                        <div style={{ fontWeight: 700, fontSize: 22, marginBottom: 8, color: '#fff', textTransform: 'uppercase', textAlign: 'center', letterSpacing: 1 }}>{p.name}</div>
-                        <div style={{ fontSize: 17, color: '#fff', textAlign: 'center', lineHeight: 1.5 }}>{p.desc}</div>
-                    </div>
-                ))}
+                <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 font-serif tracking-wide">
+                    Our Products
+                </h2>
+                <p className="text-xl text-gray-300 text-center mb-12">
+                    Product Offerings by Krishnawanshi Overseas
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {products.map((p, i) => (
+                        <a href={p.link} key={i} className="group" download>
+                            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                                <div className="relative h-48">
+                                    <Image
+                                        src={p.img}
+                                        alt={p.name}
+                                        fill
+                                        style={{ objectFit: 'contain' }}
+                                        className="p-4 bg-white"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-white uppercase tracking-tight mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                                        {p.name}
+                                    </h3>
+                                    <p className="text-gray-300 text-sm line-clamp-2">
+                                        {p.desc}
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <a 
+                        href="/sample-local-pdf.pdf" 
+                        className="inline-block px-8 py-3 text-lg font-semibold text-gray-900 bg-white rounded-full hover:bg-blue-100 hover:text-blue-900 transition-all duration-300 shadow-md hover:shadow-lg"
+                        download
+                    >
+                        More Products
+                    </a>
+                </div>
             </div>
-            <div style={{ textAlign: 'center', marginTop: 32 }}>
-                <a href="#" style={{ background: '#fff', color: '#111', padding: '0.5rem 2rem', borderRadius: 24, fontWeight: 'bold', textDecoration: 'none', fontSize: 18, boxShadow: '0 2px 8px #0001' }}>MORE...</a>
-            </div>
-            <style>{`
-        @media (max-width: 900px) {
-          .products-original-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-          }
-        }
-        @media (max-width: 600px) {
-          .products-original-grid {
-            grid-template-columns: 1fr;
-            gap: 18px;
-          }
-        }
-      `}</style>
         </section>
     );
-} 
+}

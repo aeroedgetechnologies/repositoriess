@@ -48,7 +48,7 @@ const products = [
     {
         name: 'CULTURE TUBES (CLEAR GLASS/AMBER(FB))',
         desc: '5ml, 10ml, 30ml, 60ml, 150ml',
-        img: '/laboratory-glassware-with-colored-liquid-fb.jpg', // Placeholder; please confirm the actual file name
+        img: '/blue-liquid-laboratory-glassware-assortment_23-2149481689 (1).jpg',
         link: '/sample-local-pdf.pdf'
     }
 ];
@@ -79,10 +79,13 @@ export default function Products() {
                                     <Image
                                         src={p.img}
                                         alt={p.name}
-                                        fill
+                                        width={300} // Fixed width
+                                        height={200} // Fixed height
                                         style={{ objectFit: 'contain' }}
                                         className="p-4 bg-white"
                                         loading="lazy"
+                                        placeholder="blur" // Adds a blur placeholder while loading
+                                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" // Minimal blur placeholder
                                     />
                                 </div>
                                 <div className="p-6">
